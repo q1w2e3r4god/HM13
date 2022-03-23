@@ -5,3 +5,6 @@
 * hm13_sitelist.html : 홈피 링크 네비게이터, 링크로 구성
   * hm13_info.html : 나의 소개
   * hm13_day.html : 나의 하루
+## 사용한 html 기술 
+*
+*
