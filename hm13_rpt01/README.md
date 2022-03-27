@@ -13,3 +13,6 @@
 * table
 * iframe
 * audio
+* img src
+* hr
+* br
