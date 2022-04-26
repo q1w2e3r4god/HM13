@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head><title>hm13 : 나는 누구인가?</title>
+<style>
+        html, body { margin: 0; padding: 0; height: 100%;}
+        .header { width: 100%; height: 8%; background-color: yellowgreen; }
+        .section { width: 50%; height: 87%; float: left; }
+        .aside { width: 50%; height: 87%; float: left; }
+        .footer { width: 100%; height: 5%; clear: both; background-color: brown; text-align:center; font-style: italic; font-weight: 700;}
+        .menubar{
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+        .menubar li{
+            display: inline-block;
+            margin: 15px;
+            padding: 10px;
+        }
+        .menubar li a{
+            color: black;
+            font-size: 20px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .menubar li a:hover{
+            color: violet;
+        }
+        
+</style>
+</head>
+<body>
+    <div class="header">
+        <div class="menubar">
+            <li><a href="hm13_main.html"target="left">나는 누구인가?</a></li>
+            <li><a href="hm13_day.html" target="left">나의 하루</a></li>
+            <li><a href="hm13_best3book.html" target="left">My Best 3</a></li>
+            <li><a href="hm13_form.html" target="left">동호회</a></li>
+            <li><a href="hm13_card.html" target="left">X-MAS</a></li>
+            <li><a href="https://github.com/Redwoods" target="_blank">강의홈페이지</a></li>
+        </div>
+    </div>
+    <div class="section">
+        <iframe src="hm13_main.html" name="left" width="100%" height="100%"
+        frameborder=0 framespacing=0 marginheight=0 marginwidth=0 scrolling=yes vspace=0></iframe>
+    </div>
+    <div class="aside">
+        <iframe src="hm13_info.html" name="right" width="100%" height="100%"
+        frameborder=0 framespacing=0 marginheight=0 marginwidth=0 scrolling=yes vspace=0></iframe>
+    </div>
+    <div class="footer">
+        <br>Made by 20192585 이승준
+    </div>
+    
+</body>
+</html>
