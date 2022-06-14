@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>HM13 : 나는 누구인가?</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            header{
+                text-align: center;
+                z-index: 1000;
+            }
+            body {
+                font-family: sans-serif;
+                padding: 10px;
+                background: #f1f1f1;
+            }
+
+            h1 {
+                margin: 1.5em 0 1.5em 0;
+            }  
+            
+            nav {
+                width: 100%;
+                display: inline-block;
+                position: relative;
+                background: linear-gradient(90deg, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+            }
+
+            ul, li {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                z-index: 1000;
+            }
+
+            #main-menu > li {
+                float: left;
+                position: relative;
+                width: 11%;
+            }
+
+            #main-menu > li > a {
+                font-size: 1rem;
+                color: rgba(255,255,255,0.85);
+                text-align: center;
+                text-decoration: none;
+                letter-spacing: 0.05em;
+                display: block;
+                padding: 14px 36px;
+                border-right: 1px solid rgba(0,0,0,0.15);
+                text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+            }
+
+            #main-menu > li:nth-child(1) > a {
+                border-left: 1px solid rgba(0,0,0,0.15);
+            }
+
+            #sub-menu {
+                position: absolute;
+                background: #182952;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.15s ease-in;
+            }
+
+            #sub-menu > li {
+                padding: 16px 80px;                
+                border-bottom: 1px solid rgba(0,0,0,0.15);
+            }
+
+            #sub-menu > li >  a {
+                color: rgba(255,255,255,0.6);
+                text-decoration: none;
+                font-size: 15px;
+            }
+
+            #main-menu > li:hover #sub-menu {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            #sub-menu > li >  a:hover {
+                text-decoration: underline;
+            }
+
+            .leftcolumn {
+                float: left;
+                width: 70%;
+            }
+
+             /* Right column */
+            .rightcolumn {
+                float: left;
+                width: 30%;
+                padding-left: 10px;
+
+            }
+
+            .fakeimg {
+                background-color: rgb(228, 216, 216);
+                width: 100%;
+                padding: 20px;
+            }
+
+            /* Add a card effect for articles */
+            .card {
+                background-color: white;
+                padding: 20px;
+                margin: 5px 0;
+                padding-top: 0;
+            }
+            
+            .contents{
+                z-index: 1;
+            }
+
+            /* Clear floats after the columns */
+            .contents:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            /* Footer */
+            #frame1, #frame2{
+                position: relative;
+                margin-top: 1em;
+                border-radius: 15px;
+                border: 2px solid black;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+            }
+            #frame3, #frame4{
+                position: relative;
+                margin-top: 1em;
+      
+                width: 100%;
+                height: 100%;
+            }
+            #loginform{
+                border-radius: 10px;
+                border: 2px solid black;
+                width: 20%;
+                height: 100px;
+                margin-top: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <input id="night_day" style="float: right;" type="button" value="야간모드" onclick="
+                    if (document.querySelector('#night_day').value === '야간모드'){
+                    document.querySelector('body').style.backgroundColor = '#2f2f2f';
+                    document.querySelector('body').style.color = 'white';
+                    document.querySelector('#night_day').value = '주간모드';
+                    }  else {
+                    document.querySelector('body').style.backgroundColor = 'white';
+                    document.querySelector('body').style.color = '#2f2f2f';
+                    document.querySelector('#night_day').value = '야간모드';
+                    }
+                    ">
+            <h1><a href="hm13_rpt03.html" style="text-decoration: none; color: black; text-align: center;">나는 누구인가?</a></h1>
+            <nav>
+                <ul id="main-menu">
+                    <li><a href="hm13_main.html" target="main">메인</a></li>
+                    <li><a href="#">프로필</a>
+                        <ul id="sub-menu">
+                            <li><a href="hm13_info.html" target="main" id="submenu">자기소개</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">나의 하루</a>
+                        <ul id="sub-menu">
+                        <li><a href="hm13_day.html" target="main" id="submenu">일과표</a></li>
+                        <li><a href="hm13_everytime.html" target="main" id="submenu">시간표</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="hm13_best3book.html" target="main">My Best 3</a>
+                        <ul id="sub-menu">
+                        <li><a href="bestbook1.html" id="submenu" target="main">인간실격</a></li>
+                        <li><a href="bestbook2.html" id="submenu" target="main">데미안</a></li>
+                        <li><a href="bestbook3.html" id="submenu" target="main">변신</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="hm13_forminfo.html" target="main">동호회</a>
+                        <ul id="sub-menu">
+                            <li><a href="hm13_form.html" id="submenu" target="main">회원가입</a></li>
+                            <li><a href="hm13_login.html" id="submenu" target="main">로그인</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="hm13_card.html" target="main">X-MAS</a></li>
+                    <li><a href="hm13_fancy_calc.html" target="main">계산기</a></li>
+                    <li><a href="#">게임</a>
+                        <ul id="sub-menu">
+                        <li><a href="hm13_game.html" id="submenu" target="main">삼세판</a></li>
+                        <li><a href="hm13_gugudan.html" id="submenu" target="main">구구단</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">사이드</a>
+                        <ul id="sub-menu">
+                        <li><a href="hm13_image3.html" id="submenu" target="side">우승기원</a></li>
+                        <li><a href="hm13_text.html" id="submenu" target="side">메모장</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="contents">
+            <div class="leftcolumn">
+            <div class="card" style="height: 900px;">
+                <iframe id = "frame1" src="hm13_main.html" name="main" frameborder="0"></iframe>
+            </div>
+            </div>
+        
+            <div class="rightcolumn">
+            <div class="card" style="height: 400px;">
+                    <iframe id = "frame2" src="hm13_image3.html" name="side" frameborder="0"></iframe>
+            </div>
+            <div class="card" style="height: 250px;">
+                <iframe id = "frame3" src="https://forecast.io/embed/#lat=35.2342&lon=128.8811&name=김해&color=#F6A8A6&font=Arial&units=si" frameborder=0></iframe>
+            </div>
+            <div class="card" style="height: 240px;">
+                <iframe id = "frame4" src="hm13_clock.html" frameborder="0"></iframe>
+            </div>
+            
+            </div>
+        </div>
+    </body>
+</html>

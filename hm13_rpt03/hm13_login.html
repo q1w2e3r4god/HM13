@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+        <meta charset="utf-8">
+        <title>hm13 : login</title>
+        <style>
+			body{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 98vh;
+			background: url(media/롤배경1.jpg);
+			background-size: cover;
+			}
+            form{
+			width: 600px;
+			margin: 200px auto;
+            border-radius: 15px;
+            border: 2px solid black;
+			}
+			div{
+				width: 100%;
+				margin: 15px auto;
+			}
+			label{
+				display: block;
+				padding: 20px;
+				font-size: 25px;
+			}
+			input{
+				width: 90%;
+				padding: 10px;
+				border: 1px solid #797979;
+				margin-left: 20px;
+				font-size: 20px;
+				border-radius: 3px;
+			}
+			button{
+				margin: 20px;
+				padding: 10px;
+				width: 100px;
+				border: none;
+				outline: none;
+				cursor: pointer;
+				border-radius: 5px;
+				background: linear-gradient(90deg, royalblue, lightgreen);
+				font-size: 20px;
+				font-weight: bold;
+				color: whitesmoke;
+			}
+			span{
+				display: block;
+				margin-left: 20px;
+				color: red;
+				font-style: italic;
+			}
+        </style>
+    </head>
+</html>
+
+<body>
+    <form>
+		<div>
+			<label for="username">Username</label>
+			<input type="text" name="username" placeholder="아이디">
+			<span></span>
+		</div>
+		<div>
+			<label for="password">Password</label>
+			<input type="password" name="password" placeholder="비밀번호">
+			<span></span>
+		</div>
+		<button type="button" onclick="location.href='hm13_lol.html'">로그인</button>
+	</form>
+</body>

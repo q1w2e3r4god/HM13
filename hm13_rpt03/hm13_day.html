@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+	<head>
+		<!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+		<meta charset="utf-8">
+		<title>hm13 : My Daliy life</title>
+		<style>
+			body{
+				background-color: antiquewhite;
+			}
+			table{
+				border-collapse: collapse;
+				margin-left: auto; margin-right: auto;
+			}
+			td,th{
+				text-align: left;
+			}
+			th{
+				height: 40px;
+				width: 200px;
+			}
+			td{
+				height: 40px;
+				width: 200px;
+			}
+			thead{
+				background: darkgray;
+				color: yellow;
+			}
+			tfoot{
+				background: darkgray;
+				color: black;
+			}
+			td, tfoot th{
+				border-bottom: 1px solid gray;
+			}
+			tbody tr:nth-child(even){
+				background: aliceblue;
+			}
+			tbody tr:hover{
+				background: plum;
+				font-style: italic;
+				text-decoration: underline;
+				font-size: 1.5em;
+			}
+			.imgtext{
+				text-align: center;
+			}
+			.multiEffect {
+			color: #ff595e;
+			text-shadow: 2px 2px 2px black;
+			font-size: 20px;
+			text-decoration: none;
+		}
+		</style>
+		<script>
+			function everytime() {
+      			var answer = confirm("시간표 볼래?");
+      			return answer;
+    }
+		</script>
+	</head>
+
+	<body>
+		<!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+        <h2 style="text-align: center;">My Daily Life</h2>
+        <hr>
+		<h4 class="multiEffect" style="text-align: center;"><a onclick="return everytime()" href="hm13_everytime.html">시간표 보러가기</a></h4><br>
+		<table>
+			<thead>
+				<tr>
+					<th>시간/요일</th><th>평일</th><th>주말</th>
+				</tr>
+			</thead>
+            <tfoot><tr><th>이후</th><th>휴식 및 취침</th><th>휴식 및 취침</th></tr></tfoot>
+			<tbody>
+				<tr>
+					<td>07:00 ~ 09:00</td><td>기상 및 등교</td><td>기상 및 아침식사</td>
+				</tr>
+				<tr>
+					<td>09:00 ~ 13:00</td><td>오전 수업듣기</td><td>과제 제출하기</td>
+				</tr>
+                <tr>
+                    <td>13:00 ~ 14:00</td><td>점심 식사하기</td><td>점심 식사하기</td>
+                </tr>
+                <tr>
+                    <td>14:00 ~ 17:00</td><td>오후 수업듣기</td><td>하고 싶은 게임</td>
+                </tr>
+                <tr>
+                    <td>17:00 ~ 19:00</td><td>저녁 식사하기</td><td>저녁 식사하기</td>
+                </tr>
+                <tr>
+                    <td>19:00 ~ 21:00</td><td>배운 내용 복습</td><td>자유 활동</td>
+                </tr>
+			</tbody>
+		</table>
+	</body>
+
+</html>

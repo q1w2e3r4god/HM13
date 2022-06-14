@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+	<head>
+		<!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+		<meta charset="utf-8">
+		<title>hm13 : My Daliy life</title>
+		<style>
+			body{
+				background-color: antiquewhite;
+			}
+			table{
+				border-collapse: collapse;
+				margin-left: auto; margin-right: auto;
+			}
+			td,th{
+				text-align: left;
+			}
+			th{
+				height: 40px;
+				width: 200px;
+			}
+			td{
+				height: 40px;
+				width: 200px;
+			}
+			thead{
+				background: darkgray;
+				color: yellow;
+			}
+			tfoot{
+				background: darkgray;
+				color: black;
+			}
+			td, tfoot th{
+				border-bottom: 1px solid gray;
+			}
+			tbody tr:nth-child(even){
+				background: aliceblue;
+			}
+			tbody tr:hover{
+				background: plum;
+				font-style: italic;
+				text-decoration: underline;
+				font-size: 1.5em;
+			}
+			.imgtext{
+				text-align: center;
+			}
+			.multiEffect {
+			color: #ff595e;
+			text-shadow: 2px 2px 2px black;
+			font-size: 20px;
+			text-decoration: none;
+		}
+		</style>
+		<script>
+			function day() {
+      			var answer = confirm("일과표 볼래?");
+      			return answer;
+    		}	
+		</script>
+	</head>
+
+	<body>
+		<!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+        <h2 style="text-align: center;">My Daily Life</h2>
+        <hr>
+		<h4 class="multiEffect" style="text-align: center;"><a onclick="return day()" href="hm13_day.html">일과표 보러가기</a></h4><br>
+		<div class="imgtext">
+			<img src="media/everytime.png" style="text-align: center;" width="600" height="400">
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,16 @@
+*{
+    font-family:'Lucida Sans'; 
+    text-align: center;
+    position: relative;
+}
+.date{
+    top:30px;
+    font-size: 50px; 
+    color: rgb(0, 255, 255);  /* 흰색 */
+}
+.time{
+    top:0px;
+    font-size: 80px;
+    font-weight: bold;
+    color: rgb(179, 21, 171);  /*보라색 */
+}

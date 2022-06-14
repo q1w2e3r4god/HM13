@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+  <head>
+    <!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+    <meta charset="utf-8" />
+    <title>hm13 : Javascript Event</title>
+    <style>
+        .Effect {
+			color: #ff595e;
+			text-shadow: 2px 2px 2px pink;
+		}
+    </style>
+    <script>
+      // 미리 로딩해둘 이미지 이름 배열
+      var files = [
+        "media/정승하 박인수 박현수 김승태.jpg",
+        "media/제우스 오너 페이커 구마유시 케리아.jpg",
+        "media/해체가 답이다.jpg",
+        ];
+      var imgs = new Array();
+      for (var i = 0; i < files.length; i++) {
+        imgs[i] = new Image(); // 메모리에 이미지 객체 생성
+        imgs[i].src = files[i]; // 이미지 로딩
+      }
+      var team = ["Liiv SANDBOX(카트라이더)", "T1(LOL)", "롯데자이언츠(야구)"];
+      var explain = ["리그 3회 우승", "LCK 10회 우승 MSI 2회 우승 롤드컵 3회 우승", "30년째 우승못함"];
+
+      // 다음 이미지 출력
+      var next = 1;
+      function change(img) {
+        img.src = imgs[next].src; // 이미지 변경
+        var nameSplit = files[next].split('/');
+        var nameText = document.getElementById("name");
+        var explainText = document.getElementById("explain");
+        var teamText = document.getElementById("team");
+        nameText.innerHTML = "선수 구성 : " + nameSplit[1].replace(".jpg","");
+        for (var i = next; i < team.length; i++){
+          teamText.innerHTML = team[next];
+        }
+        for (var i = next; i < explain.length; i++){
+          explainText.innerHTML = "설명 : " + explain[next];
+        }
+        next++; // 다음 이미지
+        next %= imgs.length; // 개수를 넘으면 처음으로
+      }
+      function init(img){
+        var nameSplit = files[next-1].split('/');
+        var nameText = document.getElementById("name");
+        var explainText = document.getElementById("explain");
+        var teamText = document.getElementById("team");
+        img.src = files[next-1];
+        nameText.innerHTML = "선수 구성 : " +nameSplit[1].replace(".jpg","");
+        for (var i = next-1; i < team.length; i++){
+          teamText.innerHTML = team[next-1];
+        }
+        for (var i = next-1; i < explain.length; i++){
+          explainText.innerHTML = "설명 : " + explain[next-1];
+        }
+      }
+      function over(obj){
+        obj.style.borderColor = "#f17c7c";
+      }
+      function on(obj){
+        obj.style.borderColor = "#9b7cf1";
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+    <h3>좋아하는 팀</h3>
+    <h5 class="Effect">
+    <p>
+            <img id="imgimg"
+            style="border:20px ridge #9b7cf1"
+            src="media/정승하 박인수 박현수 김승태.jpg"
+            alt="."
+            width="80%"
+            height="130px"
+            onclick="change(this)"
+            onload="init(this)"
+            onmouseover="over(this)"
+            onmouseout="on(this)"
+            
+            
+          />
+          <p id="team" style="text-align: center;"></p>
+          <p id="name" style="text-align: center;"></p>
+          <p id="explain" style="text-align: center;"></p>
+      
+      
+    </p>
+  </body>
+</html>
